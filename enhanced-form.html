@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enhanced Form & Content Showcase</title>
+   </head>
+<body>
+    <main>
+        <header>
+            <h1>Enhanced Form and Content Showcase</h1>
+            <p>This page demonstrates the use of structured content and a complete HTML5 form with built-in validation.</p>
+        </header>
+
+        <section id="lists-section">
+            <h2>Lists: Unordered and Ordered</h2>
+            
+            <h3>Key Features</h3>
+            <ul>
+                <li><strong>Semantic HTML:</strong> Using tags like <code>&lt;header&gt;</code>, <code>&lt;section&gt;</code>, and <code>&lt;form&gt;</code> for clarity.</li>
+                <li><strong>Accessibility:</strong> Implementing <code>&lt;label&gt;</code> and <code>&lt;fieldset&gt;</code> for better user experience.</li>
+                <li><strong>Validation:</strong> Relying on native HTML5 attributes like <code>required</code>, <code>pattern</code>, and <code>minlength</code>.</li>
+                <li><strong>Structured Content:</strong> Showcasing lists, tables, and media in a logical flow.</li>
+            </ul>
+
+            <h3>Workflow Steps</h3>
+            <ol>
+                <li>Review the page design and content requirements.</li>
+                <li>Structure the HTML using semantic tags.</li>
+                <li>Add the static content sections (lists, tables, media).</li>
+                <li>Construct the complete HTML5 form with all specified input types.</li>
+                <li>Apply validation attributes and accessibility features.</li>
+                <li>Validate the final HTML file for compliance.</li>
+            </ol>
+        </section>
+        <section id="table-section"> 
+            <h2>Table: Feature Comparison</h2>
+               
+             <table border="1">
+                <caption>Comparison of HTML5 Form Validation Attributes</caption>
+                <thead>
+                <thead>
+                    <tr>
+                        <th>Attribute</th>
+                        <th>Description</th>
+                        <th>Example Use Case</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code>required</code></td>
+                        <td>Specifies that an input field must be filled out before submitting.</td>
+                        <td>Username, password, or email fields.</td>
+                    </tr>
+                    <tr>
+                        <td><code>pattern</code></td>
+                        <td>Specifies a regular expression that the input value must match.</td>
+                        <td>Phone numbers, zip codes, or specific ID formats.</td>
+                    </tr>
+                    <tr>
+                        <td><code>minlength</code>/<code>maxlength</code></td>
+                        <td>Specifies the minimum/maximum number of characters required.</td>
+                        <td>Password fields, comments, or short text inputs.</td>
+                    </tr>
+                    <tr>
+                        <td><code>type</code></td>
+                        <td>Defines the type of data the input field contains (e.g., email, number, date).</td>
+                        <td>Ensures a valid email format or a numeric value.</td>
+                    </tr>
+                </tbody>
+            </table>
+        </section>
+
+        <section id="media-section">
+            <h2>Media: Images and Video</h2>
+            <div class="media-container">
+                <figure>
+                    <img src="https://images.pexels.com/photos/32822357/pexels-photo-32822357.jpeg" alt="Picture of a horse." width="300" height="250">
+                    <figcaption>A picture of a horse in the field at sunset.</figcaption>
+                </figure>
+                <figure>
+                    <video controls width="350" height="200">
+                        <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+                        <source src="https://www.w3schools.com/html/mov_bbb.ogg" type="video/ogg">
+                        Your browser does not support the video tag.
+                    </video>
+                    <audio controls>
+                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.ogg" type="audio/ogg">
+                        <source src="https://pixabay.com/music/future-bass-tell-me-what-379638/" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
+                    <figcaption>A short, looping video clip to showcase the use of the video element.</figcaption>
+                </figure>
+            </div>
+        </section>
+
+        <section id="form-section">
+            <h2>Complete HTML5 Form</h2>
+            <p>Please fill out the form below. All fields with an asterisk (*) are required.</p>
+            
+            <form action="#" method="post" autocomplete="on">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    
+                    <div>
+                        <label for="full_name">Full Name *</label>
+                        <input type="text" id="full_name" name="full_name" placeholder="John Doe" required>
+                    </div>
+
+                    <div>
+                        <label for="email">Email Address *</label>
+                        <input type="email" id="email" name="email" placeholder="john.doe@example.com" required>
+                    </div>
+
+                    <div>
+                        <label for="phone">Phone Number</label>
+                        <input type="tel" id="phone" name="phone" placeholder="123-456-7890" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+                        <small>Format: 123-456-7890</small>
+                    </div>
+                    <div>
+                          <label for="country">Country:</label>
+                  <select name="country" id="country">
+                    <option value="">--Select Country--</option>
+                    <option value="Kenya">Kenya</option>
+                    <option value="Uganda">Uganda</option>
+                    <option value="Tanzania">Tanzania</option>  
+                    <option value="Rwanda">Rwanda</option>
+                    <option value="Burundi">Burundi</option>
+                    <option value="South Africa">South Africa</option>
+                    <option value="Nigeria">Nigeria</option>
+                    <option value="Ghana">Ghana</option>
+                  </select>
+                    </div>
+
+                    <div>
+                        <label for="birthdate">Date of Birth</label>
+                        <input type="date" id="birthdate" name="birthdate">
+                    </div>
+
+                    <div>
+                        <label for="password">Create Password *</label>
+                        <input 
+                            type="password" 
+                            id="password" 
+                            name="password" 
+                            placeholder="Must be at least 8 characters" 
+                            required 
+                            minlength="8"
+                        >
+                    </div>
+                </fieldset>
+
+                <fieldset>
+                    <legend>Survey Details</legend>
+                    
+                    <div>
+                        <label for="gender">Gender</label>
+                        <select id="gender" name="gender">
+                            <option value="" disabled selected>-- Select a gender --</option>
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                            <option value="nonbinary">Non-binary</option>
+                            <option value="other">Other</option>
+                            <option value="prefer_not_to_say">Prefer not to say</option>
+                        </select>
+                    </div>
+                    
+                    <div>
+                        <label for="favorite_color">Favorite Color</label>
+                        <input type="color" id="favorite_color" name="favorite_color">
+                    </div>
+                    
+                    <div>
+                        <label for="age">Age</label>
+                        <input type="number" id="age" name="age" min="18" max="99" placeholder="18-99">
+                        <small>Age must be between 18 and 99.</small>
+                    </div>
+                    
+                    <div>
+                        <label for="satisfaction">Satisfaction Level (1-10)</label>
+                        <input type="range" id="satisfaction" name="satisfaction" min="1" max="10" value="5">
+                    </div>
+
+                    <div>
+                        <label>Preferred Communication Method *</label>
+                        <div class="form-row">
+                            <input type="radio" id="email_comm" name="communication" value="email" required>
+                            <label for="email_comm">Email</label>
+                        </div>
+                        <div class="form-row">
+                            <input type="radio" id="phone_comm" name="communication" value="phone" required>
+                            <label for="phone_comm">Phone</label>
+                        </div>
+                        <div class="form-row">
+                            <input type="radio" id="both_comm" name="communication" value="both" required>
+                            <label for="both_comm">Both</label>
+                        </div>
+                    </div>
+
+                    <div>
+                        <label for="comments">Comments</label>
+                        <textarea id="comments" name="comments" rows="4" placeholder="Share your thoughts here..." minlength="20" maxlength="500"></textarea>
+                    </div>
+                </fieldset>
+                
+                <div>
+                    <label>
+                        <input type="checkbox" name="terms" required>
+                        I agree to the <a href="#">terms and conditions</a> *.
+                    </label>
+                </div>
+                
+                <button type="submit">Submit Form</button>
+            </form>
+        </section>
+    </main>
+    <!-- Footer Section -->
+    <footer>
+        <p>&copy; 2025 My Awesome Website. All rights reserved.</p>
+        <p>Contact us at <a href="mailto:info@myawesomewebsite.com">solutionsjefftech@gmail.com</a>.</p>
+    </footer>
+</body>
+</html>
